@@ -174,7 +174,7 @@ public:
         }
         return in;
     }
-    Lista& operator+(const Lista& param)
+    Lista operator+(const Lista& param)
     {
         Lista rezultat;
         Nod* aux;
