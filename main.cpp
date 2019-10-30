@@ -1,6 +1,6 @@
 
 
-#include "structs.h"
+#include "Lista.h"
 void test_adauga()
 {
     cout << "test_adauga:\n\n";
@@ -20,12 +20,13 @@ void test_adauga()
     v.Clear();
 }
 
-void test_citeste_si_scrie() {
+void test_citeste_si_scrie()
+{
     cout << "test_citire:\n\n";
     Lista v;
     cout << "mai intai, se citeste <N>, care reprezinta nr de adaugari in lista\n"
-        << "apoi <N> tupluri de forma <VAL POZ>\n"
-        << "exemplu de citire:     4 10 0 15 1 20 2 30 3  -> va crea lista (10, 15, 20 ,30)\n\n";
+         << "apoi <N> tupluri de forma <VAL POZ>\n"
+         << "exemplu de citire:     4 10 0 15 1 20 2 30 3  -> va crea lista (10, 15, 20 ,30)\n\n";
     cin >> v;
     cout << v;
     cout << "\n---------------\n";
@@ -33,10 +34,11 @@ void test_citeste_si_scrie() {
     v.Clear();
 }
 
-void test_sterge() {
+void test_sterge()
+{
     cout << "test_sterge:\n\n";
     Lista v;
-    cout << v;
+    //cout << v;
     v.Add(1, 0);  // 1
     v.Add(2, 0);  // 2 1
     v.Add(3, 0);  // 3 2 1
@@ -58,7 +60,7 @@ void test_plus()
 {
     cout << "test_plus:\n\n";
     Lista v, q;
-    cout << v;
+   // cout << v;
     v.Add(1, 0);  // 1
     v.Add(2, 0);  // 2 1
     v.Add(3, 0);  // 3 2 1
@@ -87,9 +89,11 @@ void test_plus()
     q.Clear();
 }
 
-int main() {
-   test_adauga();
+int main()
+{
+    test_adauga();
     test_sterge();
     test_plus();
     test_citeste_si_scrie();
+    return 0;
 }

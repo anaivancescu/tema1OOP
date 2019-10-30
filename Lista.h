@@ -1,4 +1,6 @@
-#pragma once
+#ifndef LISTA_H_INCLUDED
+#define LISTA_H_INCLUDED
+
 
 
 #include <iostream>
@@ -60,10 +62,7 @@ public:
     }
 
     void Clear() {
-        // eliberez memoria pentru toate nodurile pe destructor
-        // cat timp delete(0) returneaza true, inseamna ca a sters un element
-        // cand returneaza false, inseamna ca primul == ultimul == nulptr (lista e goala)
-        while (Delete(0));
+                while (Delete(0));
     }
 
     bool Add(int element, int poz) {
@@ -201,3 +200,5 @@ private:
 
 
 };
+
+#endif // LISTA_H_INCLUDED
